@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <title>REGISTRATION FORM</title>
+    </head>
+    <body bgcolor="#0387A2">
+        <table align="center">
+            <tr>
+                <td>
+                    <h1>REGISTRATION FORM</h1>
+                </td>
+                <td>
+                    <img src="user.png">
+                </td>
+            </tr> 
+        </table>
+        <form autocomplete="on">
+            <br>
+            <fieldset>
+                <legend>Credentials</legend>
+            <p align="center">
+                Name: <input type="text" required>
+                <br>
+                <br>
+                Age:  <input type="Number" min="0" max="100">
+                <br>
+                <br>
+                Address: 
+                <textarea rows="3" columns="3" placeholder="Write your address here"></textarea>
+                <br>
+                <br>
+                Email: <input type="text" placeholder="name@example.com">
+                <br>
+                <br>
+                Date Of Birth: <input type="date">
+                <br>
+                <br>
+                Select fav. color: <input type="color">
+                <br>
+                <br>
+                Select grad year: <select name="grad" id="year">
+                    <option>2020</option>
+                    <option>2021</option>
+                    <option>2022</option>
+                    <option>2023</option>
+                    <option>2024</option>
+                    <option>2025</option>
+                </select>
+                <br>
+                <br>Languages Known:
+                    <input type="checkbox" name="chck" id="chck">JAVA
+                    <input type="checkbox" name="chck1" id="chck">C++
+                <br>
+                <br>
+                Select Nationality:
+                <select>
+                    <optgroup label="America">
+                        <option value="Chicago">Chicago</option>
+                        <option value="Indiana">Indiana</option>
+                        <option value="Atlanta">Atlanta</option>
+                        <option value="Los vegas">Los Vegas</option>
+                    </optgroup>
+                    <optgroup label="England">
+                        <option value="Manchester">Manchester</option>
+                        <option value="London">London</option>
+                        <option value="Nottingham">Nottingham</option>
+                        <option value="chelsea">Chelsea</option>
+                    </optgroup>
+                </select>
+                <br><br>
+                Rate your Communication Skill : 0<input type="range" min="0" max=5>5
+                <br>
+                <br>
+                   Gender:&nbsp;<input type="radio" name="gender" value="male">male
+                   &nbsp;<input type="radio" name="gender" value="female">female
+                   <br><br>
+                   Add your homepage: <input type="url" name="homepage" list="urlslist"><br><br>
+                   <datalist id="urlslist">
+                    <option value="http://www.duckduckgo.com">
+                    <option value="http://www.google.com">
+                    <option value="http://www.yahoo.com">
+                    <option value="http://www.bing.com">
+                  </datalist>
+                    Password:&nbsp;<input type="password"><br><br>
+                    Confirm Password:&nbsp;<input type="password"><br><br>
+                    phone no:<input type="tel" pattern="^[789]{1}[0-9]{9}" required>
+                    <p align="center"><input type="submit">&nbsp;<input type="reset"></p> 
+                </fieldset>
+            </p>
+        </form>
+    </body>
+
+</html>

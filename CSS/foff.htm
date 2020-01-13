@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                background-image: url("grad.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                display:grid;
+                font-weight: 100;
+                font-size: medium;
+                font-family: Impact, Charcoal, sans-serif;
+                 padding-left: 30em;
+                padding-top: 2em;
+                padding-bottom: 2em;
+            }
+            .card{
+                position: relative;
+                width: 50%;
+            }
+            .card__img{
+                background-size: cover;
+                position: absolute;
+                height: 900px;
+                width: 650px;
+                z-index: -1;
+                object-fit:cover;
+
+            }
+            .card__wave{
+                position: absolute;
+                background: black;
+                height: 155px;
+                z-index: 3;
+                width: 650px;
+                object-fit: fill;
+            }
+            .card__logo{
+                position: relative;
+                top:15px;
+                left:490px;
+                z-index: 6;
+                width: 150px;
+                height: 50px;
+                object-fit:fill;
+
+            }
+            .card_itc{
+                position: relative;
+                top:-30px;
+                left: 10px;
+                z-index: 6;
+                width:50px;
+                height: 50px;
+                object-fit: fill;
+
+            }
+
+            
+            .abquote{
+                background-size: cover;
+                position: absolute;
+                top:800px;
+                z-index: 3;
+                left: 0px;
+                width: 650px;
+                height: 100px;
+                background: none;
+                object-fit: fill;
+
+            }
+            .quote{
+                position: absolute;
+                top:800px;
+                z-index: 7;
+                left: 500px;
+                width: 100px;
+                height: 100px;
+                background: none;
+                object-fit: fill;
+
+            }
+            .place{
+                position: relative;
+                top:0px;
+                width: 100px;
+            }
+            .borderbox{
+                width: 400px;
+                color: wheat;
+                 left: 70px;
+                position: absolute;
+                top:840px;
+                z-index: 10;
+            }
+            .card__extra{
+                position: absolute;
+                top:40px;
+                left: 100px;
+                height: 100px;
+                width: 200px;
+                background: none;
+                z-index: 11;
+                object-fit: fill;
+            }
+            
+            span{
+                letter-spacing: 5px;
+                font-family: "Comic Sans MS", cursive, sans-serif;
+                background-color: black;
+                border: 10px solid black;
+                padding: 10px;
+                height: 300px;
+                width: 500px;
+                font-weight: 200;
+                font-size: 500;
+                position: relative;
+                z-index: 20;
+                display: none;
+            }
+            div:hover+span{
+                display: block;
+                left: 750px;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="place">
+        <img src="cap.jpg" class="card__img">
+        <img src="avengers.png" class="card__extra">
+        <img src="preview.png" class="card__wave">
+        <img src="download.png" class="card__logo">
+        <img src="itc.png" class="card_itc">
+        <img src="AU Logo.png" class="quote">
+        <div class="borderbox">
+            <p>  Customize your notebook <br>
+                www.classmate.com
+            </p>
+        </div>
+        <img src="bottom.png" class="abquote">
+        </div>
+        <span>
+            <ul>
+                <li>
+                    <h1>Marvel Notebook Series<br></h1>
+                </li>
+                <li>
+                    <h1> Limited Edition<br></h1>
+                </li>
+                <li>
+                    <h1>Available near-by retail store</h1>
+        
+                </li>
+            </ul>
+            <img src="giphy.gif" width="500" height="500">
+        </span>
+        </body>
+</html>

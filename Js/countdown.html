@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+
+            #borderbox{
+                align-items: center;
+                color: white;
+                border: 2px solid white;
+                object-fit: contain;
+                text-align: center;
+                align-items: center;
+                width: 400px;
+                height:200px;
+                padding: 20px;
+                margin: 100px;   
+                margin-left: 300px;       
+            }
+            
+            #timer{
+                object-fit: cover;
+                margin: 40px;
+                margin-left: 30px;
+                font-size: 50px;
+            }
+            #box{
+                margin: 100px;
+                object-fit: fill;
+            }
+            #dates{
+                border:white;
+                text-decoration: none;
+                color: black;
+                background-color: #2F303A;
+                font-family: Poppins;
+            }
+            #button{
+                background-color: black;
+                border-radius: 10px;
+                margin: 10px;
+                color: white;
+                margin-left: 50px;
+                padding: 15px;
+                border: 2px solid #98F9E8;
+                width: 100px;
+                
+            font-family: Poppins;
+            }
+            #button:hover{
+                background-color: palevioletred;
+                
+            }
+            body{
+            background-color: #2F303A;
+            margin: 150px;
+            margin-left: 100px;
+            font-family: Poppins;
+            }
+            
+            @media only screen and (max-width: 900px) {
+            #borderbox{
+                margin: 5px;    
+            }
+            }
+        </style>
+    </head>
+    <body>
+        <p style="font-size: 25px; background-color:#F98E8A;text-align: center;">
+            Countdown Timer Actually
+        </p>
+        <div id="borderbox">
+            <p id="timer">
+                Pick a time and KickStart
+            </p>    
+        <div id="box">
+            <input type="datetime-local" name="dates" id="dates" required>
+            <input type="submit" name="button" id="button" value="set timer" onclick="clickme()" >
+        </div>
+    </div>
+    </body>
+    <script>
+        function clickme()
+        {
+            var a=document.getElementById("dates");   
+            var b=document.getElementById("button");
+            var countto=new Date(a.value).getTime();
+            var i=0;
+            var parent=document.getElementById("box");
+           parent.removeChild(a);
+           parent.removeChild(b);
+            var x=setInterval(function() {
+            var now=new Date().getTime();
+            var timer=countto-now;
+            var days=Math.floor(timer/(1000*60*60*24));
+            var hours=Math.floor((timer%(1000*60*60*24))/(1000*60*60));
+            var minutes=Math.floor((timer%(1000*60*60))/(1000*60));
+            var seconds=Math.floor((timer%(1000*60))/1000);
+            document.getElementById("timer").innerHTML=days+"d"+hours+"h"+minutes+"m"+seconds+"s";
+            if(timer<0)
+            {
+                clearInterval(x);
+                document.getElementById("timer").innerHTML="expired";
+            }
+    },1000);
+}
+    </script>
+</html>
